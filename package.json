@@ -16,7 +16,7 @@
     "type": "git",
     "url": "ssh://git@github.com:gpn-prototypes/frontend-configs.git"
   },
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
