@@ -12,13 +12,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const styleLoader = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 
-module.exports = ({ root, entry, port = 3000 }) => ({
+module.exports = ({ root, entry, port = 3000, postCssConfig }) => ({
   mode: isProduction ? 'production' : 'development',
 
-  entry: path.resolve(root, entry),
+  entry: path.resolve(entry),
 
   output: {
-    publicPath: process.env.PUBLIC_PATH || './',
+    publicPath: isProduction ? './' : '/',
   },
 
   optimization: isProduction
@@ -51,7 +51,7 @@ module.exports = ({ root, entry, port = 3000 }) => ({
           {
             loader: 'postcss-loader',
             // eslint-disable-next-line global-require
-            options: require('./postcss.config'),
+            options: { ...postCssConfig },
           },
         ],
       },
@@ -120,7 +120,7 @@ module.exports = ({ root, entry, port = 3000 }) => ({
   },
 
   devServer: {
-    contentBase: path.resolve(root, './public'),
+    contentBase: path.join(root, 'public'),
     port,
   },
 
@@ -133,7 +133,7 @@ module.exports = ({ root, entry, port = 3000 }) => ({
       chunkFilename: '[id].css',
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(root, './public/index.html'),
+      template: path.join(root, './public/index.html'),
       inject: 'body',
     }),
   ].filter(Boolean),
