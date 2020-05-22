@@ -1,20 +1,20 @@
 {
   "name": "@gpn-prototypes/frontend-configs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "author": "csssr",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "engines": {
     "node": "^12.16.2",
     "yarn": "^1.22.4"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/ttteam-org/"
+    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com:ttteam-org/frontend-configs.git"
+    "url": "ssh://git@github.com:gpn-prototypes/frontend-configs.git"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -28,17 +28,15 @@
     "@storybook/react": "^5.3.18",
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/react": "^10.0.3",
-    "terser-webpack-plugin": "^3.0.1",
     "@types/jest": "^25.2.1",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.34",
     "@typescript-eslint/eslint-plugin": "^2.29.0",
     "@typescript-eslint/parser": "^2.29.0",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "commitizen": "^4.0.4",
     "css-loader": "^3.5.2",
-    "clean-webpack-plugin": "^3.0.0",
-    "webpack-bundle-analyzer": "^3.7.0",
     "cz-customizable": "^6.2.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^18.1.0",
@@ -51,9 +49,9 @@
     "eslint-plugin-react-hooks": "^2.5.0",
     "eslint-plugin-simple-import-sort": "^5.0.2",
     "html-webpack-plugin": "^4.3.0",
-    "mini-css-extract-plugin": "^0.9.0",
     "jest": "^25.4.0",
     "lerna": "^3.20.2",
+    "mini-css-extract-plugin": "^0.9.0",
     "postcss-loader": "^3.0.0",
     "postcss-nested": "^4.2.1",
     "prettier": "^2.0.5",
@@ -65,10 +63,12 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.0.0",
     "stylelint-prettier": "^1.1.2",
+    "terser-webpack-plugin": "^3.0.1",
     "ts-jest": "^25.4.0",
     "ts-loader": "^7.0.1",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.8.3",
-    "webpack": "^4.42.1"
+    "webpack": "^4.42.1",
+    "webpack-bundle-analyzer": "^3.7.0"
   }
 }
