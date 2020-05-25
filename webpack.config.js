@@ -74,7 +74,6 @@ module.exports = ({ appConfig, postCssConfig }) => {
             {
               loader: 'ts-loader',
               options: {
-                compiler: 'ttypescript',
                 context: root,
               },
             },
