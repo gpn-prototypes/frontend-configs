@@ -1,6 +1,6 @@
 module.exports = {
   types: [
-    { value: 'feat', name: 'feature:   Добавление нового функционала' },
+    { value: 'feat', name: 'feat:      Добавление нового функционала' },
     { value: 'fix', name: 'fix:       Исправление ошибок' },
     { value: 'test', name: 'test:      Добавление тестов' },
     {
@@ -18,10 +18,12 @@ module.exports = {
     scope: 'Область изменений (опционально):',
     customScope: 'Введите вашу область:',
     subject: 'Краткое описание изменений:\n',
-    body: 'Подробное описание изменений (опционально):\n',
-    footer: 'Дополнительная информация:\n',
+    body: 'Подробное описание изменений:\n',
+    breaking: 'Описание BREAKING CHANGES для повышения мажорной версии пакета:\n',
     confirmCommit: 'Сохранить получившийся коммит?',
   },
+  skipQuestions: ['footer'],
+  allowBreakingChanges: ['feat', 'fix', 'test', 'refactor', 'docs', 'chore'],
   allowCustomScopes: true,
   subjectLimit: 100,
 };
