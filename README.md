@@ -51,6 +51,12 @@ module.exports = webpackMerge(getCommonConfig({ appConfig, postCssConfig }), myP
 Принимает на вход
 
 ```ts
-appConfig: { root: string, port: number, analyze: 0 | 1, mode: 'production' | 'development', entry: string } - конфигурация для настройки вэбпака
+appConfig = { 
+  root: string, // корневая директория проекта
+  port: number, // порт для старта дев сервера
+  analyze: 0 | 1, // нужен ли WebpackBundleAnalyzer
+  mode: 'production' | 'development', // режим сборки
+  entry: string // точка входа проекта
+} - конфигурация для настройки вэбпака
 postCssConfig - конфиг postCss
 ```
