@@ -9,7 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = ({ appConfig, postCssConfig }) => {
-  const { root, entry, port, mode } = appConfig;
+  const { root, entry, port, mode, analyze } = appConfig;
 
   const isProduction = mode === 'production';
   const styleLoader = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
@@ -129,7 +129,7 @@ module.exports = ({ appConfig, postCssConfig }) => {
     plugins: [
       isProduction && new CleanWebpackPlugin(),
       new webpack.ProvidePlugin({ React: 'react' }),
-      process.env.ANALYZE && new BundleAnalyzerPlugin(),
+      analyze && new BundleAnalyzerPlugin(),
       new MiniCssExtractPlugin({
         filename: '[name].css',
         chunkFilename: '[id].css',
