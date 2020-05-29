@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    name: Публикация новой версии
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout branch
+      uses: actions/checkout@v1
+    - name: Установка github-release-notes and генерация changelog
+      run: |
+        npx github-release-notes changelog --generate --override --token=${{ secrets.GITHUB_TOKEN }} --changelog-filename=TEMP_CHANGELOG.md
+      env:
+        CI: true
+    - name: Создание и паблиш релиза
+      uses: ncipollo/release-action@v1
+      with:
+        bodyFile: 'TEMP_CHANGELOG.md'
+        token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Использование Node.js 12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+        registry-url: 'https://npm.pkg.github.com'
+    - name: Публикация пакета в Github-registry
+      run: |
+        yarn policies set-version 1.22.4
+        yarn
+        npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
