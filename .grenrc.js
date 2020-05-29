@@ -11,7 +11,7 @@ module.exports = {
   "groupBy": false,
   template: {
     issue: ({ text, url, name }) => (
-      `- ${name.replace(/((GINF|TSUB)-\d*)/, '[$1](https://jira.csssr.io/browse/$1)')} [${text}](${url})`
+      `- ${name.replace(/((VEGA)-\d*)/, '[$1](https://jira.csssr.io/browse/$1)')} [${text}](${url})`
     ),
     changelogTitle: '### Изменения\n\n',
     release: '{{body}}'
