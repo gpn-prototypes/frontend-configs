@@ -2,13 +2,14 @@
 
 Конфиги для фронтенд-проектов ГПН
 
-### Включают в себя: 
+### Включают в себя:
 
 - Webpack
 - Jest
 - Eslint
 - Prettier
 - Commitizen
+  - коммиты именуются согласно спеке [Conventional Commits](https://www.conventionalcommits.org/)
 - Lint-staged
 - Postcss
 - EditorConfig
@@ -48,7 +49,7 @@ const myProjectConfig = {
 };
 
 module.exports = webpackMerge(
-  gpnWebpackConfig({ appConfig, postCssConfig }), 
+  gpnWebpackConfig({ appConfig, postCssConfig }),
   myProjectConfig,
 );
 
@@ -57,7 +58,7 @@ module.exports = webpackMerge(
 Принимает на вход
 
 ```ts
-webpackConfig = { 
+webpackConfig = {
   root: string, // корневая директория проекта
   port: number, // порт для старта дев сервера
   analyze: 0 | 1, // нужен ли WebpackBundleAnalyzer
