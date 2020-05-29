@@ -11,6 +11,10 @@
 - Commitizen
 - Lint-staged
 - Postcss
+- EditorConfig
+- Babel
+- Stylelint
+- TypeScript
 
 ### Использование
 
@@ -36,27 +40,29 @@ module.exports = {
 ```js
 // webpack.config.js
 
-/// some code
 const webpackMerge = require('webpack-merge');
-const getCommonConfig = require('@gpn-prototypes/frontend-configs/webpack.config.js');
+const gpnWebpackConfig = require('@gpn-prototypes/frontend-configs/webpack.config.js');
 
 const myProjectConfig = {
-  /// some code
+  ...
 };
 
-module.exports = webpackMerge(getCommonConfig({ appConfig, postCssConfig }), myProjectConfig);
+module.exports = webpackMerge(
+  gpnWebpackConfig({ appConfig, postCssConfig }), 
+  myProjectConfig,
+);
 
 ```
 
 Принимает на вход
 
 ```ts
-appConfig = { 
+webpackConfig = { 
   root: string, // корневая директория проекта
   port: number, // порт для старта дев сервера
   analyze: 0 | 1, // нужен ли WebpackBundleAnalyzer
   mode: 'production' | 'development', // режим сборки
   entry: string // точка входа проекта
-} - конфигурация для настройки вэбпака
+} - конфигурация для настройки webpack'а
 postCssConfig - конфиг postCss
 ```
