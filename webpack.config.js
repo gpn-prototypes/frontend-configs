@@ -8,10 +8,15 @@ const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-module.exports = ({ appConfig, postCssConfig }) => {
+module.exports = ({ appConfig, postCssConfig, aliases }) => {
   const { root, entry, port, mode, analyze } = appConfig;
 
+  const defaultAliases = {
+    '@vega': path.resolve(root, 'src')
+  };
+
   const isProduction = mode === 'production';
+  const alias = aliases || defaultAliases
   const styleLoader = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 
   return {
@@ -107,9 +112,7 @@ module.exports = ({ appConfig, postCssConfig }) => {
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.json'],
       modules: [path.resolve(root, 'node_modules')],
-      alias: {
-        '@': path.resolve(root, 'src'),
-      },
+      alias,
       symlinks: false,
     },
 
