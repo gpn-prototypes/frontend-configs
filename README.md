@@ -19,7 +19,13 @@
 
 ### Использование
 
-В своем проекте установите зависимость
+В своем проекте вам нужно добавить файл ```.npmrc``` со следующий содержанием
+
+```
+@gpn-prototypes:registry=https://npm.pkg.github.com
+```
+
+Затем вам нужно установить проект
 
 ```
 yarn add @gpn-prototypes/frontend-configs
