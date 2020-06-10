@@ -19,7 +19,7 @@ module.exports = {
     customScope: 'Введите вашу область:',
     subject: 'Краткое описание изменений:\n',
     body: 'Подробное описание изменений:\n',
-    breaking: 'Описание BREAKING CHANGES:\n',
+    breaking: 'Описание BREAKING CHANGES для повышения мажорной версии пакета:\n',
     confirmCommit: 'Сохранить получившийся коммит?',
   },
   skipQuestions: ['footer'],

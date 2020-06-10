@@ -2,35 +2,63 @@ name: Release
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches: ['master']
 
 jobs:
-  publish:
-    name: Публикация новой версии
+  build:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
     steps:
     - name: Checkout branch
-      uses: actions/checkout@v1
-    - name: Установка github-release-notes and генерация changelog
-      run: |
-        npx github-release-notes changelog --generate --override --token=${{ secrets.GITHUB_TOKEN }} --changelog-filename=TEMP_CHANGELOG.md
-      env:
-        CI: true
-    - name: Создание и паблиш релиза
-      uses: ncipollo/release-action@v1
+      uses: actions/checkout@v2
       with:
-        bodyFile: 'TEMP_CHANGELOG.md'
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.ADMIN_TOKEN }}
+    - name: Настройка git
+      run: |
+        git config --local user.name "GitHub Workflow"
+        git config --local user.email "workflow@github.com"
+
+    - name: Скачивание всей git-истории (чтобы работал from-git)
+      run: git fetch --prune --unshallow
+
     - name: Использование Node.js 12
       uses: actions/setup-node@v1
       with:
         node-version: 12
         registry-url: 'https://npm.pkg.github.com'
-    - name: Публикация пакета в Github-registry
+
+    - name: Поднятие версии пакета
+      run: |
+        yarn --frozen-lockfile
+        yarn release --no-verify --releaseCommitMessageFormat "chore(package): обновление пакета [skip ci]"
+        git push origin master --follow-tags
+
+    - name: Генерация логов
+      id: changelog
+      uses: hitmanet/vega-actions/generate-changelog@master
+      env:
+        GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Создание gh release
+      uses: hitmanet/vega-actions/generate-gh-release@master
+      with:
+        changelog: ${{ steps.changelog.outputs.changelog }}
+        token: ${{ secrets.ADMIN_TOKEN }}
+
+    - name: Обновление CHANGELOG.md
+      uses: hitmanet/vega-actions/update-changelog@master
+      with:
+        changelog: ${{ steps.changelog.outputs.changelog }}
+
+    - name: Коммит CHANGELOG.md
+      run: |
+        git add CHANGELOG.md
+        git commit -m "chore(changelog): обновление changelog [skip ci]" --no-verify --quiet
+        git push origin master
+
+    - name: Публикация на gh registry
       run: |
         yarn policies set-version 1.22.4
-        yarn
         npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
