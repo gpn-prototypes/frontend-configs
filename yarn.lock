@@ -968,17 +968,16 @@
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-9.0.1.tgz#df281f0f3d8f3adb10c95e4dd72b16acf41b5400"
   integrity sha512-wo2rHprtDzTHf4tiSxavktJ52ntiwmg7eHNGFLH38G1of8OfGVwOc1sVbpM4jN/HK/rCMhYOi6xzoPqsv0537A==
 
-"@hitmanet808/lerna-changelog@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@hitmanet808/lerna-changelog/-/lerna-changelog-3.0.1.tgz#698cdac8ffe1f7edc285e6ba4a585f3c4dca4d10"
-  integrity sha512-lIc1dEcS6+NsZY2YE5uoJjbX4nR2u0+Ofl56JBsM0gulaj3x7raa/1Gc2GCx6XR1L3quik36HMXZgm6UquruKw==
+"@gpn-prototypes/vega-changelog@^3.2.4":
+  version "3.2.4"
+  resolved "https://npm.pkg.github.com/download/@gpn-prototypes/vega-changelog/3.2.4/4caa341242f63f8f6fc8989ae225d20bd4434b4ce28c9bab408a97a7e07edbf3#c955b80a785356ebfde63c0736c6ed2662214353"
+  integrity sha512-W+2IGwR/DcZRU4ItGnUOrxtMKthPzTYtbyyPLzgwa0JIevsDk5Gtw+NRiotO8kuxTAU9v8EP0PqQ4frrKXg/MQ==
   dependencies:
     chalk "^2.4.1"
     cli-highlight "^2.1.4"
     execa "^1.0.0"
     hosted-git-info "^3.0.4"
     make-fetch-happen "^7.1.1"
-    p-map "^3.0.0"
     progress "^2.0.0"
     yargs "^13.0.0"
 
