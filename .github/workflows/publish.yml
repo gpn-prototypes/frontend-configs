@@ -35,18 +35,18 @@ jobs:
 
     - name: Генерация логов
       id: changelog
-      uses: hitmanet/vega-actions/generate-changelog@master
+      uses: gpn-prototypes/vega-actions/generate-changelog@master
       env:
         GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Создание gh release
-      uses: hitmanet/vega-actions/generate-gh-release@master
+      uses: gpn-prototypes/vega-actions/generate-gh-release@master
       with:
         changelog: ${{ steps.changelog.outputs.changelog }}
         token: ${{ secrets.ADMIN_TOKEN }}
 
     - name: Обновление CHANGELOG.md
-      uses: hitmanet/vega-actions/update-changelog@master
+      uses: gpn-prototypes/vega-actions/update-changelog@master
       with:
         changelog: ${{ steps.changelog.outputs.changelog }}
 
