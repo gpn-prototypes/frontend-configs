@@ -24,6 +24,11 @@
       "config": "./git/commitizen.js"
     }
   },
+  "standard-version": {
+    "skip": {
+      "changelog": true
+    }
+  },
   "scripts": {
     "prettier": "prettier --config prettierrc.js --write ./**/*.{ts,tsx,css,js,jsx}",
     "lint:ts": "eslint -c eslintrc.js --ext=.ts,.tsx .",

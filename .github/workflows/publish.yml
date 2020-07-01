@@ -32,6 +32,8 @@ jobs:
         yarn --frozen-lockfile
         yarn release --no-verify --releaseCommitMessageFormat "chore(package): обновление пакета [skip ci]"
         git push origin master --follow-tags
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Генерация логов
       id: changelog
