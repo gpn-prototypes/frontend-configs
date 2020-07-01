@@ -32,9 +32,7 @@
     "lint:css:fix": "stylelint --config stylelintrc.js ./packages ./.storybook --fix",
     "lint:md": "remark . -o",
     "lint": "yarn run lint:ts && yarn run lint:css && yarn run lint:md",
-    "lint:fix": "yarn run lint:ts:fix && yarn run lint:css:fix && yarn run lint:md",
-    "changelog": "lerna-changelog",
-    "release": "standard-version"
+    "lint:fix": "yarn run lint:ts:fix && yarn run lint:css:fix && yarn run lint:md"
   },
   "dependencies": {
     "@babel/core": "^7.9.0",
@@ -85,8 +83,6 @@
     "cz-customizable": "^6.2.0",
     "lint-staged": "^10.2.11",
     "commitizen": "^4.1.2",
-    "husky": "^4.2.5",
-    "@hitmanet808/lerna-changelog": "^3.0.1",
-    "standard-version": "^8.0.0"
+    "husky": "^4.2.5"
   }
 }
