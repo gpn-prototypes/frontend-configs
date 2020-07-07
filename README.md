@@ -21,23 +21,36 @@
 
 ### Использование
 
-1. Добавьте в свой проект файл ```.npmrc``` со следующий содержанием:
+Чтобы установить пакеты, сначала необходимо авторизоваться в github npm registry. Для этого нужно сделать следующее:
+
+1. Сгенерировать токен: <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> → Generate new token. Дополнительно нужно отметить `read:packages` и `write:packages`.
+
+2. Авторизоваться из текущей директории в Github-реджистри через npm:
+
+```bash
+$ npm login --registry=https://npm.pkg.github.com`
+> Username: USERNAME
+> Password: TOKEN
+> Email: PUBLIC-EMAIL-ADDRESS
+```
+
+3. Добавьте в свой проект файл `.npmrc` со следующий содержанием:
 
 ```
 @gpn-prototypes:registry=https://npm.pkg.github.com
 ```
 
-2. Установите проект
+4. Установите проект
 
 ```
 yarn add @gpn-prototypes/frontend-configs
 ```
 
-3. Создайте конфиг нужного пакета и экспортните там конфиг из ```frontend-configs```
+5. Создайте конфиг нужного пакета и экспортните там конфиг из `frontend-configs`
 
 ```js
 module.exports = {
-  ...require('@gpn-prototypes/frontend-configs/jest/jest.config.js'),
+  ...require("@gpn-prototypes/frontend-configs/jest/jest.config.js"),
   // Сюда можете дописать кастомный конфиг
 };
 ```
