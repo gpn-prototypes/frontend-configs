@@ -87,6 +87,6 @@
     "commitizen": "^4.1.2",
     "husky": "^4.2.5",
     "@gpn-prototypes/vega-changelog": "^3.2.4",
-    "standard-version": "^8.0.0"
+    "standard-version": "^8.0.1"
   }
 }
