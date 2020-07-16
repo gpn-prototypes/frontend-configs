@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v0.1.4 (2020-07-16)
+
+* build(deps-dev): bump standard-version from 8.0.0 to 8.0.1 [#12](https://github.com/gpn-prototypes/frontend-configs/pull/12)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
 ## v0.1.3 (2020-07-16)
 
 * refactor(lint-staged): обновить конфиг [#10](https://github.com/gpn-prototypes/frontend-configs/pull/10)
