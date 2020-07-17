@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v0.1.5 (2020-07-17)
+
+* VEGA-109: Не запускать commitizen при rebase, amend, etc [#13](https://github.com/gpn-prototypes/frontend-configs/pull/13)
+   * Автор PR: [@tsvetta](https://github.com/tsvetta)
+
 ## v0.1.4 (2020-07-16)
 
 * build(deps-dev): bump standard-version from 8.0.0 to 8.0.1 [#12](https://github.com/gpn-prototypes/frontend-configs/pull/12)
