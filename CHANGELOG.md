@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.1.0 (2020-07-20)
+
+* VEGA-207: Отредактирован корневой README.md [#14](https://github.com/gpn-prototypes/frontend-configs/pull/14)
+   * Автор PR: [@ilchukovaolga](https://github.com/ilchukovaolga)
+
 ## v0.1.5 (2020-07-17)
 
 * VEGA-109: Не запускать commitizen при rebase, amend, etc [#13](https://github.com/gpn-prototypes/frontend-configs/pull/13)
