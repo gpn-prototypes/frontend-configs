@@ -86,5 +86,5 @@ webpackConfig = {
   mode: 'production' | 'development', // режим сборки
   entry: string // точка входа проекта
 } // конфигурация для настройки Webpack
-postCssConfig // конфигурация postCss
+postCssConfig // конфигурация PostCSS
 ```
