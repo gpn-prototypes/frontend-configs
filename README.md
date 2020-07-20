@@ -21,7 +21,7 @@
 
 ### Использование
 
-Чтобы установить пакеты, сначала необходимо авторизоваться в github npm registry. Для этого нужно сделать следующее:
+Чтобы установить пакеты, нужно сделать следующее:
 
 1. Сгенерировать токен: <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> → Generate new token. Дополнительно нужно отметить `read:packages` и `write:packages`.
 
@@ -34,30 +34,30 @@ $ npm login --registry=https://npm.pkg.github.com`
 > Email: PUBLIC-EMAIL-ADDRESS
 ```
 
-3. Добавьте в свой проект файл `.npmrc` со следующий содержанием:
+3. Добавить в свой проект файл `.npmrc` со следующим содержанием:
 
 ```
 @gpn-prototypes:registry=https://npm.pkg.github.com
 ```
 
-4. Установите проект
+4. Установить проект:
 
 ```
 yarn add @gpn-prototypes/frontend-configs
 ```
 
-5. Создайте конфиг нужного пакета и экспортните там конфиг из `frontend-configs`
+5. Создать конфигурацию нужного пакета и экспортировать в нее конфигурацию из `frontend-configs`:
 
 ```js
 module.exports = {
   ...require("@gpn-prototypes/frontend-configs/jest/jest.config.js"),
-  // Сюда можете дописать кастомный конфиг
+  // Здесь можете дописать кастомную конфигурацию
 };
 ```
 
 ### Работа с Webpack
 
-Конфиг Webpack подключается следующим образом
+Конфигурация Webpack подключается следующим образом
 
 ```js
 // webpack.config.js
@@ -81,10 +81,10 @@ module.exports = webpackMerge(
 ```ts
 webpackConfig = {
   root: string, // корневая директория проекта
-  port: number, // порт для старта дев сервера
+  port: number, // порт для старта дев-сервера
   analyze: 0 | 1, // нужен ли WebpackBundleAnalyzer
   mode: 'production' | 'development', // режим сборки
   entry: string // точка входа проекта
-} - конфигурация для настройки webpack'а
-postCssConfig - конфиг postCss
+} // конфигурация для настройки Webpack
+postCssConfig // конфигурация postCss
 ```
