@@ -26,8 +26,8 @@
   },
   "scripts": {
     "prettier": "prettier --config prettierrc.js --write ./**/*.{ts,tsx,css,js,jsx}",
-    "lint:ts": "eslint --no-error-on-unmatched-pattern --config ./eslintrc.js --ext=.ts,.tsx .",
-    "lint:ts:fix": "eslint --no-error-on-unmatched-pattern --config ./eslintrc.js --ext=.ts,.tsx . --fix",
+    "lint:ts": "eslint --config ./eslintrc.js --ext .ts,.tsx,.js,.jsx .",
+    "lint:ts:fix": "eslint --config ./eslintrc.js --ext .ts,.tsx,.js,.jsx --fix",
     "lint:md": "remark . --frail",
     "lint:md:fix": "remark . --output --",
     "lint": "yarn run lint:ts && yarn run lint:md",
