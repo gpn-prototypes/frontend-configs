@@ -8,7 +8,7 @@
 
 Если в автоматическом деплое обнаружены неполадки, то после мержа вашего PR в `master`, вам необходимо:
 
-1. Перейти в ветку `master`
-2. Обновить версию пакета с помощью `npm version patch|minor|major`
-3. Выполнить команду `git push origin master --follow-tags`
-4. Запаблишить пакет `npm publish`
+1.  Перейти в ветку `master`
+2.  Обновить версию пакета с помощью `npm version patch|minor|major`
+3.  Выполнить команду `git push origin master --follow-tags`
+4.  Запаблишить пакет `npm publish`
