@@ -26,8 +26,12 @@
   },
   "scripts": {
     "prettier": "prettier --config prettierrc.js --write ./**/*.{ts,tsx,css,js,jsx}",
-    "lint": "eslint --no-error-on-unmatched-pattern --config eslintrc.js --ext=.ts,.tsx .",
-    "lint:fix": "eslint --no-error-on-unmatched-pattern --config eslintrc.js --ext=.ts,.tsx . --fix",
+    "lint:ts": "eslint --no-error-on-unmatched-pattern --config eslintrc.js --ext=.ts,.tsx .",
+    "lint:ts:fix": "eslint --no-error-on-unmatched-pattern --config eslintrc.js --ext=.ts,.tsx . --fix",
+    "lint:md": "remark . --rc-path remarkrc.js --frail",
+    "lint:md:fix": "remark . --rc-path remarkrc.js -output --",
+    "lint": "yarn run lint:ts && yarn run lint:md",
+    "lint:fix": "yarn run lint:ts:fix && yarn run lint:md:fix",
     "changelog": "lerna-changelog",
     "release": "standard-version"
   },
@@ -77,6 +81,7 @@
   },
   "devDependencies": {
     "remark-cli": "^8.0.0",
+    "remark-preset-lint-recommended": "^4.0.1",
     "cz-customizable": "^6.2.0",
     "lint-staged": "^10.2.11",
     "commitizen": "^4.1.2",
