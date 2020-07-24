@@ -12,11 +12,11 @@ module.exports = ({ appConfig, postCssConfig, aliases }) => {
   const { root, entry, port, mode, analyze } = appConfig;
 
   const defaultAliases = {
-    '@vega': path.resolve(root, 'src')
+    '@vega': path.resolve(root, 'src'),
   };
 
   const isProduction = mode === 'production';
-  const alias = aliases || defaultAliases
+  const alias = aliases || defaultAliases;
   const styleLoader = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 
   return {
