@@ -1,4 +1,4 @@
 module.exports = {
   mode: 'repo',
-  repo: 'gpn-prototypes/frontend-configs'
+  repo: 'gpn-prototypes/frontend-configs',
 };
