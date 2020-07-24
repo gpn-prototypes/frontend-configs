@@ -6,26 +6,26 @@
 
 ### Включают в себя:
 
-- Webpack
-- Jest
-- Eslint
-- Prettier
-- Commitizen
-  - коммиты именуются согласно спеке [Conventional Commits](https://www.conventionalcommits.org/)
-- Lint-staged
-- Postcss
-- EditorConfig
-- Babel
-- Stylelint
-- TypeScript
+-   Webpack
+-   Jest
+-   Eslint
+-   Prettier
+-   Commitizen
+    -   коммиты именуются согласно спеке [Conventional Commits](https://www.conventionalcommits.org/)
+-   Lint-staged
+-   Postcss
+-   EditorConfig
+-   Babel
+-   Stylelint
+-   TypeScript
 
 ### Использование
 
 Чтобы установить пакеты, нужно сделать следующее:
 
-1. Сгенерировать токен: <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> → Generate new token. Дополнительно нужно отметить `read:packages` и `write:packages`.
+1.  Сгенерировать токен: <a href="https://github.com/settings/tokens">https&#x3A;//github.com/settings/tokens</a> → Generate new token. Дополнительно нужно отметить `read:packages` и `write:packages`.
 
-2. Авторизоваться из текущей директории в Github-реджистри через npm:
+2.  Авторизоваться из текущей директории в Github-реджистри через npm:
 
 ```bash
 $ npm login --registry=https://npm.pkg.github.com`
@@ -34,19 +34,17 @@ $ npm login --registry=https://npm.pkg.github.com`
 > Email: PUBLIC-EMAIL-ADDRESS
 ```
 
-3. Добавить в свой проект файл `.npmrc` со следующим содержанием:
+3.  Добавить в свой проект файл `.npmrc` со следующим содержанием:
 
-```
-@gpn-prototypes:registry=https://npm.pkg.github.com
-```
 
-4. Установить проект:
+    @gpn-prototypes:registry=https://npm.pkg.github.com
 
-```
-yarn add @gpn-prototypes/frontend-configs
-```
+4.  Установить проект:
 
-5. Создать конфигурацию нужного пакета и экспортировать в нее конфигурацию из `frontend-configs`:
+
+    yarn add @gpn-prototypes/frontend-configs
+
+5.  Создать конфигурацию нужного пакета и экспортировать в нее конфигурацию из `frontend-configs`:
 
 ```js
 module.exports = {
