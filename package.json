@@ -26,13 +26,8 @@
   },
   "scripts": {
     "prettier": "prettier --config prettierrc.js --write ./**/*.{ts,tsx,css,js,jsx}",
-    "lint:ts": "eslint -c eslintrc.js --ext=.ts,.tsx .",
-    "lint:ts:fix": "eslint -c eslintrc.js --ext=.ts,.tsx . --fix",
-    "lint:css": "stylelint --config stylelintrc.js ./packages ./.storybook",
-    "lint:css:fix": "stylelint --config stylelintrc.js ./packages ./.storybook --fix",
-    "lint:md": "remark . -o",
-    "lint": "yarn run lint:ts && yarn run lint:css && yarn run lint:md",
-    "lint:fix": "yarn run lint:ts:fix && yarn run lint:css:fix && yarn run lint:md",
+    "lint": "eslint --no-error-on-unmatched-pattern --config eslintrc.js --ext=.ts,.tsx .",
+    "lint:fix": "eslint --no-error-on-unmatched-pattern --config eslintrc.js --ext=.ts,.tsx . --fix",
     "changelog": "lerna-changelog",
     "release": "standard-version"
   },
