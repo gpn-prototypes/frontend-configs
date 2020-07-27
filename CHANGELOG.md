@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.0 (2020-07-27)
+
+* VEGA-250: Доработать prettier, eslint, remark в frontend-configs [#15](https://github.com/gpn-prototypes/frontend-configs/pull/15)
+   * Автор PR: [@tsvetta](https://github.com/tsvetta)
+
 ## v1.1.0 (2020-07-20)
 
 * VEGA-207: Отредактирован корневой README.md [#14](https://github.com/gpn-prototypes/frontend-configs/pull/14)
