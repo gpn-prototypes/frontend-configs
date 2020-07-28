@@ -1,4 +1,4 @@
-const path = require('path');
+const joinPath = require("path.join");
 
 /* Пример использования:
 
@@ -14,7 +14,15 @@ module.exports = {
 
 module.exports = {
   hooks: {
-    'pre-commit': `lint-staged -c ${path.join(__dirname, 'git', 'lint-staged.config.js')}`,
-    'prepare-commit-msg': `${path.join(__dirname, 'git', 'prepare-commit-msg.sh')} $HUSKY_GIT_PARAMS`,
+    "pre-commit": `lint-staged -c ${joinPath(
+      __dirname,
+      "git",
+      "lint-staged.config.js"
+    )}`,
+    "prepare-commit-msg": `${joinPath(
+      __dirname,
+      "git",
+      "prepare-commit-msg.sh"
+    )} $HUSKY_GIT_PARAMS`,
   },
 };
