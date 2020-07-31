@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.2 (2020-07-31)
+
+* Исправить конфиг lint-staged [#20](https://github.com/gpn-prototypes/frontend-configs/pull/20)
+   * Автор PR: [@Inzephirum](https://github.com/Inzephirum)
+
 ## v1.2.1 (2020-07-30)
 
 * VEGA-277: Исправить ошибку работу прехуков в Windows [#17](https://github.com/gpn-prototypes/frontend-configs/pull/17)
