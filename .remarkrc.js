@@ -1,5 +1,3 @@
 module.exports = {
-  plugins: [
-    "remark-preset-lint-recommended"
-  ]
-}
+  plugins: ['remark-preset-lint-recommended'],
+};
