@@ -18,6 +18,7 @@
 -   Babel
 -   Stylelint
 -   TypeScript
+-   Remark
 
 ### Использование
 
