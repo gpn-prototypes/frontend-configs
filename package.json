@@ -26,8 +26,8 @@
   },
   "scripts": {
     "prettier": "prettier --config ./.prettierrc.js --write ./**/*.js",
-    "lint:ts": "eslint --ext .ts,.tsx,.js,.jsx .",
-    "lint:ts:fix": "eslint --ext .ts,.tsx,.js,.jsx --fix",
+    "lint:ts": "eslint --ext=.ts,.tsx,.js,.jsx .",
+    "lint:ts:fix": "eslint --ext=.ts,.tsx,.js,.jsx . --fix",
     "lint:md": "remark . --frail",
     "lint:md:fix": "remark . --output --",
     "lint": "yarn run lint:ts && yarn run lint:md",
@@ -66,6 +66,8 @@
     "postcss-nested": "^4.2.1",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
+    "remark-cli": "^8.0.1",
+    "remark-lint": "^7.0.1",
     "remark-preset-lint-recommended": "^4.0.1",
     "style-loader": "^1.1.4",
     "stylelint": "^13.3.3",
@@ -86,7 +88,6 @@
     "cz-customizable": "^6.2.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "remark-cli": "^8.0.0",
     "standard-version": "^8.0.1"
   }
 }
