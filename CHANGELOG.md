@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.3 (2020-09-01)
+
+* VEGA-90: Обновление eslint до 7.2.0 [#16](https://github.com/gpn-prototypes/frontend-configs/pull/16)
+   * Автор PR: [@Davs777](https://github.com/Davs777)
+
 ## v1.2.2 (2020-07-31)
 
 * Исправить конфиг lint-staged [#20](https://github.com/gpn-prototypes/frontend-configs/pull/20)
