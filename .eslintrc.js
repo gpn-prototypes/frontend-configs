@@ -67,6 +67,14 @@ module.exports = {
       },
     ],
     'sort-imports': 'off',
+    'comma-dangle': ['error', {
+      'arrays': 'never',
+      'objects': 'never',
+      'imports': 'never',
+      'exports': 'never',
+      'functions': 'ignore'
+    }],
+
     'import/order': 'off',
     'import/first': 'error',
     'import/newline-after-import': 'error',
@@ -83,6 +91,8 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'no-confusing-arrow': ['error', { 'allowParens': false }],
+    'no-redeclare': ['error', { 'builtinGlobals': false }],
     'simple-import-sort/sort': [
       'error',
       {
