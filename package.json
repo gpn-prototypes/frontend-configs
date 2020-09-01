@@ -1,6 +1,6 @@
 {
   "name": "@gpn-prototypes/frontend-configs",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "main": "index.js",
   "author": "gpn-prototypes",
   "license": "MIT",
@@ -37,9 +37,9 @@
   },
   "dependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
-    "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-typescript": "^7.9.0",
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/react": "^10.0.3",
@@ -80,13 +80,13 @@
     "webpack-bundle-analyzer": "^3.7.0"
   },
   "devDependencies": {
+    "@gpn-prototypes/vega-changelog": "^3.2.4",
+    "commitizen": "^4.1.2",
+    "cz-customizable": "^6.2.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "remark-cli": "^8.0.0",
     "remark-preset-lint-recommended": "^4.0.1",
-    "cz-customizable": "^6.2.0",
-    "lint-staged": "^10.2.11",
-    "commitizen": "^4.1.2",
-    "husky": "^4.2.5",
-    "@gpn-prototypes/vega-changelog": "^3.2.4",
     "standard-version": "^8.0.1"
   }
 }
