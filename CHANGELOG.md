@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.4 (2020-09-21)
+
+* VEGA-411: Починить eslint в frontend-configs [#21](https://github.com/gpn-prototypes/frontend-configs/pull/21)
+   * Автор PR: [@Inzephirum](https://github.com/Inzephirum)
+
 ## v1.2.3 (2020-09-01)
 
 * VEGA-90: Обновление eslint до 7.2.0 [#16](https://github.com/gpn-prototypes/frontend-configs/pull/16)
