@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.5 (2020-09-22)
+
+* VEGA-369: Обновить TS [#22](https://github.com/gpn-prototypes/frontend-configs/pull/22)
+   * Автор PR: [@c1n1k](https://github.com/c1n1k)
+
 ## v1.2.4 (2020-09-21)
 
 * VEGA-411: Починить eslint в frontend-configs [#21](https://github.com/gpn-prototypes/frontend-configs/pull/21)
