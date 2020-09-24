@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.6 (2020-09-24)
+
+* VEGA-449: Обновить зависимости и конфиг к postcss в frontend-configs [#23](https://github.com/gpn-prototypes/frontend-configs/pull/23)
+   * Автор PR: [@c1n1k](https://github.com/c1n1k)
+
 ## v1.2.5 (2020-09-22)
 
 * VEGA-369: Обновить TS [#22](https://github.com/gpn-prototypes/frontend-configs/pull/22)
