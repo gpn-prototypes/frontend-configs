@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.8 (2020-09-25)
+
+* build(deps): bump elliptic from 6.5.2 to 6.5.3 [#19](https://github.com/gpn-prototypes/frontend-configs/pull/19)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
 ## v1.2.7 (2020-09-25)
 
 * build(deps): bump tsconfig-paths-webpack-plugin from 3.2.0 to 3.3.0 [#33](https://github.com/gpn-prototypes/frontend-configs/pull/33)
