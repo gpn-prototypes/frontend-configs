@@ -1,6 +1,20 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.12 (2020-09-25)
+
+* VEGA-473: Добавить postcss в зависимости конфигов [#35](https://github.com/gpn-prototypes/frontend-configs/pull/35)
+   * Автор PR: [@c1n1k](https://github.com/c1n1k)
+
+* build(deps): bump webpack-bundle-analyzer from 3.7.0 to 3.9.0 [#27](https://github.com/gpn-prototypes/frontend-configs/pull/27)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps): bump html-webpack-plugin from 4.3.0 to 4.5.0 [#26](https://github.com/gpn-prototypes/frontend-configs/pull/26)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps): bump @testing-library/react from 10.0.4 to 11.0.4 [#25](https://github.com/gpn-prototypes/frontend-configs/pull/25)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
 ## v1.2.11 (2020-09-25)
 
 * build(deps): bump webpack-bundle-analyzer from 3.7.0 to 3.9.0 [#27](https://github.com/gpn-prototypes/frontend-configs/pull/27)
