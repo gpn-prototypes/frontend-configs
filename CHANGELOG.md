@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.7 (2020-09-25)
+
+* build(deps): bump tsconfig-paths-webpack-plugin from 3.2.0 to 3.3.0 [#33](https://github.com/gpn-prototypes/frontend-configs/pull/33)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
 ## v1.2.6 (2020-09-24)
 
 * VEGA-449: Обновить зависимости и конфиг к postcss в frontend-configs [#23](https://github.com/gpn-prototypes/frontend-configs/pull/23)
