@@ -1,6 +1,17 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.11 (2020-09-25)
+
+* build(deps): bump webpack-bundle-analyzer from 3.7.0 to 3.9.0 [#27](https://github.com/gpn-prototypes/frontend-configs/pull/27)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps): bump html-webpack-plugin from 4.3.0 to 4.5.0 [#26](https://github.com/gpn-prototypes/frontend-configs/pull/26)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps): bump @testing-library/react from 10.0.4 to 11.0.4 [#25](https://github.com/gpn-prototypes/frontend-configs/pull/25)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
 ## v1.2.10 (2020-09-25)
 
 * VEGA-449: Обновить зависимости и конфиг к postcss в frontend-configs [#34](https://github.com/gpn-prototypes/frontend-configs/pull/34)
