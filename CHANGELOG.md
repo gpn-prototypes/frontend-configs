@@ -1,6 +1,29 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.10 (2020-09-25)
+
+* VEGA-449: Обновить зависимости и конфиг к postcss в frontend-configs [#34](https://github.com/gpn-prototypes/frontend-configs/pull/34)
+   * Автор PR: [@c1n1k](https://github.com/c1n1k)
+
+* build(deps-dev): bump cz-customizable from 6.2.0 to 6.3.0 [#32](https://github.com/gpn-prototypes/frontend-configs/pull/32)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps): bump @babel/core from 7.9.6 to 7.11.6 [#31](https://github.com/gpn-prototypes/frontend-configs/pull/31)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps): bump terser-webpack-plugin from 3.0.1 to 4.2.2 [#30](https://github.com/gpn-prototypes/frontend-configs/pull/30)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps): bump jest from 25.5.4 to 26.4.2 [#29](https://github.com/gpn-prototypes/frontend-configs/pull/29)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps): bump stylelint-config-prettier from 8.0.1 to 8.0.2 [#28](https://github.com/gpn-prototypes/frontend-configs/pull/28)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps): bump actions/setup-node from v1 to v2.1.1 [#24](https://github.com/gpn-prototypes/frontend-configs/pull/24)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
 ## v1.2.9 (2020-09-25)
 
 * VEGA-449: Обновить зависимости и конфиг к postcss в frontend-configs [#34](https://github.com/gpn-prototypes/frontend-configs/pull/34)
