@@ -82,7 +82,7 @@
   },
   "devDependencies": {
     "@gpn-prototypes/vega-changelog": "^3.2.4",
-    "commitizen": "^4.1.2",
+    "commitizen": "^4.2.2",
     "cz-customizable": "^6.3.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.2.11",
