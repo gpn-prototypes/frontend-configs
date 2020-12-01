@@ -86,6 +86,7 @@ module.exports = {
     ],
     'no-confusing-arrow': ['error', { allowParens: false }],
     'no-redeclare': ['error', { builtinGlobals: false }],
+    'no-underscore-dangle': ['error', { allow: ['__typename'] }],
     'simple-import-sort/sort': [
       'error',
       {
