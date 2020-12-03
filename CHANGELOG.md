@@ -1,6 +1,14 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.13 (2020-12-03)
+
+* fix(eslint): игнорировать правило no-underscore-dangle для __typename [#66](https://github.com/gpn-prototypes/frontend-configs/pull/66)
+   * Автор PR: [@Inzephirum](https://github.com/Inzephirum)
+
+* build(deps): bump actions/setup-node from v2.1.1 to v2.1.2 [#46](https://github.com/gpn-prototypes/frontend-configs/pull/46)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
 ## v1.2.12 (2020-09-25)
 
 * VEGA-473: Добавить postcss в зависимости конфигов [#35](https://github.com/gpn-prototypes/frontend-configs/pull/35)
