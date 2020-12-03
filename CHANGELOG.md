@@ -1,6 +1,26 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.2.14 (2020-12-03)
+
+* build(deps): bump eslint-plugin-jsx-a11y from 6.2.3 to 6.4.1 [#55](https://github.com/gpn-prototypes/frontend-configs/pull/55)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps-dev): bump commitizen from 4.1.2 to 4.2.2 [#50](https://github.com/gpn-prototypes/frontend-configs/pull/50)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps): bump stylelint-order from 4.0.0 to 4.1.0 [#41](https://github.com/gpn-prototypes/frontend-configs/pull/41)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps): bump eslint-import-resolver-typescript from 2.0.0 to 2.3.0 [#38](https://github.com/gpn-prototypes/frontend-configs/pull/38)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps-dev): bump husky from 4.2.5 to 4.3.0 [#37](https://github.com/gpn-prototypes/frontend-configs/pull/37)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
+* build(deps-dev): bump standard-version from 8.0.1 to 9.0.0 [#36](https://github.com/gpn-prototypes/frontend-configs/pull/36)
+   * Автор PR: [@dependabot[bot]](https://github.com/dependabot[bot])
+
 ## v1.2.13 (2020-12-03)
 
 * fix(eslint): игнорировать правило no-underscore-dangle для __typename [#66](https://github.com/gpn-prototypes/frontend-configs/pull/66)
