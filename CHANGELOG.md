@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.3.0 (2021-03-02)
+
+* VEGA-939: Причесать правила линтера и husky hooks [#102](https://github.com/gpn-prototypes/frontend-configs/pull/102)
+   * Автор PR: [@hitmanet](https://github.com/hitmanet)
+
 ## v1.2.15 (2020-12-30)
 
 * VEGA-711: Обновить postcss [#86](https://github.com/gpn-prototypes/frontend-configs/pull/86)
