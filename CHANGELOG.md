@@ -1,6 +1,14 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.3.1 (2021-03-05)
+
+* Обновил yarn.lock [#110](https://github.com/gpn-prototypes/frontend-configs/pull/110)
+   * Автор PR: [@maksim-kononov-csssr](https://github.com/maksim-kononov-csssr)
+
+* VEGA-3192: [FE] Аудит зависимостей [#107](https://github.com/gpn-prototypes/frontend-configs/pull/107)
+   * Автор PR: [@maksim-kononov-csssr](https://github.com/maksim-kononov-csssr)
+
 ## v1.3.0 (2021-03-02)
 
 * VEGA-939: Причесать правила линтера и husky hooks [#102](https://github.com/gpn-prototypes/frontend-configs/pull/102)
