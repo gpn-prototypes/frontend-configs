@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- insert-new-changelog-here -->
+## v1.3.2 (2021-03-10)
+
+* VEGA-968: Обновить правило в линтере [#111](https://github.com/gpn-prototypes/frontend-configs/pull/111)
+   * Автор PR: [@hitmanet](https://github.com/hitmanet)
+
 ## v1.3.1 (2021-03-05)
 
 * Обновил yarn.lock [#110](https://github.com/gpn-prototypes/frontend-configs/pull/110)
