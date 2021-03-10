@@ -1,66 +1,59 @@
-name: Release
-
+name: Публикация новых версий пакетов
 on:
-  push:
-    branches: ['master']
+  workflow_dispatch:
 
 jobs:
-  release:
+  publish:
+    name: Публикация новых версий пакетов
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
     steps:
-    - name: Checkout branch
-      uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.ADMIN_TOKEN }}
-    - name: Настройка git
-      run: |
-        git config --local user.name "GitHub Workflow"
-        git config --local user.email "workflow@github.com"
+      - uses: docker://quay.csssr.cloud/csssr/github-info:v1
+        id: gh
 
-    - name: Скачивание всей git-истории (чтобы работал from-git)
-      run: git fetch --prune --unshallow
+      - uses: actions/checkout@v2
+        with:
+          ref: refs/heads/${{ steps.gh.outputs.branch }}
+          token: ${{ secrets.ADMIN_TOKEN }}
 
-    - name: Использование Node.js 12
-      uses: actions/setup-node@v2.1.2
-      with:
-        node-version: 12
-        registry-url: 'https://npm.pkg.github.com'
+      - name: Скачивание всей git-истории (чтобы работал from-git)
+        run: git fetch --prune --unshallow
 
-    - name: Поднятие версии пакета
-      run: |
-        yarn --frozen-lockfile
-        yarn release --no-verify --releaseCommitMessageFormat "chore(package): обновление пакета [skip ci]"
-        git push origin master --follow-tags
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Установка ноды
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: '12.x'
+          registry-url: 'https://npm.pkg.github.com'
 
-    - name: Генерация логов
-      id: changelog
-      uses: gpn-prototypes/vega-actions/generate-changelog@master
-      env:
-        GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
+      - name: Установка зависимостей
+        run: yarn install --frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Создание gh release
-      uses: gpn-prototypes/vega-actions/generate-gh-release@master
-      with:
-        changelog: ${{ steps.changelog.outputs.changelog }}
-        token: ${{ secrets.ADMIN_TOKEN }}
+      - name: Настройка git
+        run: |
+          git config --local user.name "GitHub Workflow"
+          git config --local user.email "workflow@github.com"
 
-    - name: Обновление CHANGELOG.md
-      uses: gpn-prototypes/vega-actions/update-changelog@master
-      with:
-        changelog: ${{ steps.changelog.outputs.changelog }}
+      - name: Поднятие версии
+        run: |
+          yarn release --no-verify --releaseCommitMessageFormat "chore(package): обновление пакета [skip ci]"
+        if: contains(steps.gh.outputs.branch, 'master')
 
-    - name: Коммит CHANGELOG.md
-      run: |
-        git add CHANGELOG.md
-        git commit -m "chore(changelog): обновление changelog [skip ci]" --no-verify --quiet
-        git push origin master
+      - name: Создание альфа-версии
+        run: |
+          yarn release --prerelease alpha --no-verify --releaseCommitMessageFormat "chore(package): обновление пакета [skip ci]"
+        if: "!contains(steps.gh.outputs.branch, 'master')"
 
-    - name: Публикация на gh registry
-      run: |
-        yarn policies set-version 1.22.4
-        npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Обновление тегов
+        run: git push origin "$GITHUB_BRANCH" --follow-tags
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_BRANCH: ${{ steps.gh.outputs.branch }}
+
+      - name: Публикация на gh registry
+        run: |
+          yarn policies set-version 1.22.4
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
