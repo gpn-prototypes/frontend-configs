@@ -70,7 +70,7 @@
     "prettier": "^2.2.1",
     "ssri": "^8.0.1",
     "style-loader": "^1.1.4",
-    "stylelint": "^13.3.3",
+    "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
