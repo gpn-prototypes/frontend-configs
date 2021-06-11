@@ -76,7 +76,7 @@
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.1.2",
     "terser-webpack-plugin": "^4.2.2",
-    "ts-loader": "^7.0.1",
+    "ts-loader": "^9.2.3",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
     "typescript": "^4.0.3",
     "y18n": "^4.0.1",
